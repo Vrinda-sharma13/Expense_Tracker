@@ -1,0 +1,190 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+ 
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+
+  body {
+    background-color: #e5f0f2;
+    
+  }
+  
+ 
+  mat-toolbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgb(21, 78, 113);
+    color: white;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  mat-toolbar span {
+    font-size: 24px;
+    margin-right: 970px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .example-button-row {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .example-button-row button {
+    margin-left: 20px;
+  }
+  
+  
+  mat-form-field, select.dropdown {
+    margin: 20px;
+  }
+  
+ 
+  div.expense {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  div.expense h1, div.expense p {
+    margin: 0;
+  }
+  
+  div.expense a {
+    margin-right: 10px;
+    color: #1976d2;
+    text-decoration: none;
+  }
+  
+  div.expense a:hover {
+    text-decoration: underline;
+  }
+  
+  div.expense button {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  div.expense button:hover {
+    background-color: #d32f2f;
+  }
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 750px 10px 10px;
+  }
+  
+  mat-form-field:first-child {
+    margin-right: 20px;
+  }
+  
+  mat-form-field:last-child {
+    margin-left: 20px;
+  }
+  
+  mat-select {
+    width: 150px;
+  }
+
+  .total-amount {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .total-amount h2 {
+    margin: 0;
+  }
+
+  .budget-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b1d6dd;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(250, 247, 247, 0.1);
+    position:fixed;
+    top: 80px;
+    right:20px;
+    z-index:1;
+    
+    border-radius: 10%;
+    color: #040505;
+    border-style: double;
+    
+  }
+ 
+
+  .add-expense-button {
+     
+    border: none; 
+    color: rgb(16, 15, 15); 
+    padding: 5px 25px ; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 20px; 
+    cursor: pointer; 
+  }
+  
+  .add-expense-button:hover {
+    background-color: #dae5e7; 
+  }
+
+  .btn{
+    color:inherit;
+    font-family:inherit;
+  font-size: inherit;
+  background: rgb(21, 78, 113);
+  
+  border: 3px solid rgb(10, 10, 10);
+  margin-right: 2.6rem;
+  box-shadow: 0 0 0 rgb(245, 236, 236);
+  transition: all 0.2s;
+  color: white;
+  }
+  .btn:last-child {
+    margin: 0;
+  }
+  
+  .btn:hover {
+    box-shadow: 0.4rem 0.4rem 0 black;
+    transform: translate(-0.4rem, -0.4rem);
+  }
+  
+  .btn:active {
+    box-shadow: 0 0 0 black;
+    transform: translate(0, 0);
+  }

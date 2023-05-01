@@ -1,0 +1,45 @@
+<body class="bg-image" >
+<div class="page-wrapper">
+  <div class="content-wrapper">
+      <input type="radio" name="toggle" id="toggle1">
+      <input type="radio" name="toggle" id="toggle2">
+    <input type="radio" name="toggle" id="toggle3">
+    <section id="section-1">
+      <div class="image-container">
+        <img src="https://st.depositphotos.com/1046403/3754/i/600/depositphotos_37543807-stock-photo-tracking-expenses.jpg" alt="">
+      </div>
+      <div class="info-container">
+        <h1>Welcome to Expense Tracker</h1>
+        <label  (click)="openDialog()">Login Here!</label>
+        <div style="margin-top: 20px;">
+        <p>Don't Have account?</p>
+        <label for="toggle2">Sign Up</label>
+        
+        </div>
+      </div>
+    </section>
+    <section id="section-2">
+      <div class="image-container">
+        <img src="https://st.depositphotos.com/1046403/3754/i/600/depositphotos_37543807-stock-photo-tracking-expenses.jpg" alt="">
+      </div>
+      <div class="info-container">
+        <h1>Create Your Account</h1>
+        <label for="toggle3" (click)="openSignup()">Sign In</label>
+      </div>
+    </section>
+  </div>
+    </div>
+    </body>
+
+<!-- <body>
+    <div class="home">
+        <h1>Welcome to Expense Management</h1>
+        <button mat-raised-button color="primary" class="home-button" (click)="openDialog()">Get Started</button>
+        <p style="margin-top: 20px;">New User ?
+          <a id="signup" routerLink="" (click)="openSignup()">Sign Up</a>
+        </p>
+        
+      </div>
+
+      </body> -->
+      

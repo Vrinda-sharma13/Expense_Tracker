@@ -1,0 +1,12 @@
+body{
+    background-color: #e5f0f2;
+}
+mat-toolbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background-color:  rgb(21, 78, 113);
+    color: white;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+  }

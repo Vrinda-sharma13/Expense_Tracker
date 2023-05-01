@@ -1,0 +1,102 @@
+<body class="bg-image">
+    <div>
+        <mat-toolbar >
+           <img src="https://play-lh.googleusercontent.com/dxxbxj--rjt2naz-o8QprGF9W8BLbNRs4Kzo8PRjk71cOvcQ3s_f-4VsyAqr9DBnGEci" width="50" (click)="handleLogOut()" style="cursor: pointer; margin-right: 20px;" >
+            <span>Expense Tracker</span>
+            
+            <div class="example-button-row">
+              <button  mat-raised-button  routerLink="/chart" >
+                 Show all expenses
+              </button>
+              </div>
+            <div class="example-button-row">
+              <button  mat-raised-button  (click)="navigate()" class="add-expense-button" >
+                 Add Expense
+              </button>
+          </div>
+            <span class="username" >
+             <img src="/assets/images/account.png" style="height: 50px; width: 50px;" style="margin-left:20px;"> {{name}}
+            </span>
+            
+            <!--  <a routerLink="/addexpense">Add Expense</a>-->
+           
+          </mat-toolbar>
+        </div>
+
+          <div class="search-bar">
+
+            
+
+            <mat-form-field appearance="outline">
+              <mat-label>Search</mat-label>
+              <input matInput type="text" [(ngModel)]="filters.keyword "    name="keyword "  (input)="ListExpenses()" placeholder="Type something...">
+                         </mat-form-field>
+                         <!-- <mat-form-field appearance="outline">
+                          <mat-label>Filter by Date</mat-label>
+                          <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="filters.date" (input)="ListExpenses()">
+                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                          <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field> -->
+                        <mat-form-field appearance="outline">
+                          <mat-label>Search By Date</mat-label>
+                        <input matInput type="text" [(ngModel)]="filters.date" (input)="ListExpenses()" name="date" placeholder=" yyyy-mm-dd">
+
+                        </mat-form-field>
+  
+            <mat-form-field appearance="outline">
+              <mat-label>Sort By</mat-label>
+              <mat-select name="sortBy" [(ngModel)]="filters.sortBy" (selectionChange)="ListExpenses()" name="sortBy">
+                <mat-option value="expense">Name</mat-option>
+                <mat-option value="amount">Amount</mat-option>
+                <mat-option value="date" >Date</mat-option>
+              </mat-select>
+            </mat-form-field>
+            
+            <form >
+              <mat-form-field appearance="outline" >
+                <mat-label>Budget</mat-label>
+               <input matInput type="number" placeholder="set your budget" [(ngModel)]="budget.amount" name="amount">
+               
+               
+              
+              </mat-form-field>
+              <button type="submit" class="btn" (click)="onSubmit()">Set</button>
+        </form>
+        
+        <div class="budget-box" id="budgetAmount">
+          
+          <img src="https://static-00.iconduck.com/assets.00/wallet-icon-492x512-9ltsf9z5.png" style="height: 50px; width: 50px;" (click)="checkBalance()">
+          
+             <p>Your Budget:   </p>
+          <h2 >
+            {{budget.amount | currency: 'INR'}}</h2>
+        </div>
+       
+           
+       
+          </div>
+
+         
+    <div *ngFor="let expense of expenses " class="expense">
+        <h1 class="col row-cols-md-3">{{expense.expense}}</h1>
+        <p class="col row-cols-md-3">
+          {{expense.date}}
+        </p>
+        <p class="col row-cols-md-3">
+            {{expense.amount | currency: 'INR'}}
+        </p>
+      <button mat-raised-button (click)="handleEdit(expense.id)"  style="margin-right: 20px; background-color:  rgb(21, 78, 113); " >Edit</button>
+    
+        <button mat-raised-button (click)="deleteExpense(expense.id)">Delete</button>
+    
+    
+    </div>
+    <div class="total-amount">
+        <h2>Total Amount: {{totalAmount | currency: 'INR'}}</h2>
+      </div>
+    </body>
+
+
+
+
+

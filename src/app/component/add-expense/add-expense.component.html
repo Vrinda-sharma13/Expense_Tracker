@@ -1,0 +1,41 @@
+<body class="bg-image">
+    <div>
+        <mat-toolbar >
+           
+           <img src="https://play-lh.googleusercontent.com/dxxbxj--rjt2naz-o8QprGF9W8BLbNRs4Kzo8PRjk71cOvcQ3s_f-4VsyAqr9DBnGEci" width="50" routerLink="/expenses" style="cursor: pointer ; margin-right: 20px;">
+           
+            <span>Expense Tracker</span>
+            
+          </mat-toolbar></div>
+          <div class="card" >
+            
+            <div class="card-body">
+                <h1 style="text-align: center; font-weight: 10px;">Add Expenses</h1>
+              <form (ngSubmit)="saveExpense()" class="expense-form">
+               
+                <div class="form-group">
+                  <label>Expense Name:</label>
+                  <input class="form-control" type="text" name="expense" [(ngModel)]="expense.expense" value={{expense.expense}} placeholder="Enter expense name">
+                  
+                </div>
+                <div class="form-group">
+                  <label>Amount:</label>
+                  <input class="form-control" type="number" name="amount" [(ngModel)]="expense.amount" value={{expense.amount}} placeholder="Enter amount">
+                </div>
+                <div class="form-group">
+                  <label>Description:</label>
+                  <textarea type="text" name="desc" [(ngModel)]="expense.description" value={{expense.description}} placeholder="Enter description" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Date:</label>
+                    <input type="Date" name="Month" [(ngModel)]="expense.date" value={{expense.date}} placeholder="Enter description" class="form-control">
+                  </div>
+                <div class="button-group">
+                  <button  class="btn" type="submit">Add Expense</button>
+                  <button mat-raised-button color="warn" *ngIf="valid" (click)="deleteExpense(editExpense.id)" class="btn btn-danger">Delete</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          
+</body>
